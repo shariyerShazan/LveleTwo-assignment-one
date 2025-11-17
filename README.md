@@ -8,13 +8,14 @@
 TypeScript এ interface এবং type উভয়ই অবজেক্টের structure define করতে ব্যবহার করা হয়, কিন্তু তাদের মধ্যে কিছু গুরুত্বপূর্ণ পার্থক্য রয়েছে। Interface সাধারণত অবজেক্ট বা ক্লাসের জন্য, type আরও flexible এবং union, intersection, primitive, tuple define করতে পারে। Interface declaration merge করতে পারে, type করতে পারে না।  
 
 উদাহরণ সহ টেবিল:
-
+---
 | বৈশিষ্ট্য               | Interface                       | Type                          |
 |------------------------|---------------------------------|-------------------------------|
 | Declaration merging     | Supported                       | Not supported                 |
 | Extend/Implement        | Supported                       | Direct extend unsupported     |
 | Use case                | অবজেক্ট বা ক্লাস structure      | Primitive, Union, Intersection|
-
+---
+**উদাহরণ:**
 ```ts
 // Interface Example
 interface Person {
@@ -46,7 +47,9 @@ const emp: Employee = {
 
 
 
-
+<p align="center">
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png" width="100%" />
+</p>
 
 # TypeScript - any, unknown, এবং never টাইপের পার্থক্য
 
@@ -136,3 +139,9 @@ function infiniteLoop(): never {
     while(true) {}
 }
 ```
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png" width="100%" />
+</p>
+
+<p align="center"><i>Thanks! 🚀</i></p>
