@@ -92,3 +92,41 @@ console.log(person2.getDetails()); //! output -> 'Name: [John Doe], Age: [30]'
 
 
 
+
+//! Problem 4:
+//? Create a function filterByRating that accepts an array of items, where each item has the following properties:
+//? title (string)
+//? rating (number between 0 and 5)
+//? The function should return a new array containing only the items with a rating of 4 or more.
+
+
+//* solution No 4 =>
+console.log()
+console.log("Output of problem-4 =>")
+
+type TBook ={
+    title: string ;
+    rating: number
+}
+
+const filterByRating = (books: TBook[]) : TBook[] | string=>{
+       const sortedBook = books.sort((a,b)=> a.rating - b.rating).filter((book)=> book.rating > 4)
+       if(sortedBook.length === 0) {
+        return "No book found"
+       }
+       return sortedBook
+}
+const books : TBook[] = [
+    { title: 'Book A', rating: 4.5 },
+    { title: 'Book B', rating: 3.2 },
+    { title: 'Book C', rating: 5.0 },
+  ];
+console.log(filterByRating(books)); //! output -> [ { title: 'Book A', rating: 4.5 }, { title: 'Book C', rating: 5 } ]
+const books2 = []
+console.log(filterByRating(books2));//! output -> No book found
+
+
+
+
+
+
