@@ -33,7 +33,7 @@ class Person {
         this.age = age;  
     }
         getDetails(): string{
-            if (!this.name || !this.age) {
+            if (this.name === ""  || this.age === 0 || !this.name || !this.age) {
                 return "Name and age is required";
             }
              return `'Name: ${this.name}, Age: ${this.age}'`

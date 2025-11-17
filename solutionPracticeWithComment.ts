@@ -77,7 +77,7 @@ class Person {
         this.age = age;  
     }
         getDetails(): string{
-            if (!this.name || !this.age) {
+            if (this.name === ""  || this.age === 0 || !this.name || !this.age) {
                 return "Name and age is required";
             }
              return `'Name: ${this.name}, Age: ${this.age}'`
@@ -89,8 +89,8 @@ console.log(person1.getDetails()); //! output -> 'Name: John Doe, Age: 30'
 const person2 = new Person('Alice', 25);
 console.log(person2.getDetails()); //! output -> 'Name: Alice, Age: 25'
 
-// const person3 = new Person('Alice');
-// console.log(person3.getDetails()); //! output -> Name and age is required
+const person3 = new Person('Alice' , 0);
+console.log(person3.getDetails()); //! output -> Name and age is required
 
 
 
